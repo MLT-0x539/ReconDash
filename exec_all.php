@@ -1,5 +1,6 @@
 <?php
-error_reporting(0);
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 include("detect_all_userinput.php");
 include("js_endpoint_fuzzer.php");
 include("js_secrets_fuzzer.php");
