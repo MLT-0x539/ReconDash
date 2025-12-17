@@ -1,6 +1,8 @@
 <?php
 // script to identify all potential DOM-based sources/sinks for XSS
 // Remote JS file passed as input
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 // Config
 $timeout = 10; 
