@@ -4,10 +4,11 @@ ini_set('display_errors', 1);
 
 $installer = $_POST['install'];
 $distro = $_POST['distro'];
+$distroval = $distro; // will modify this for distro name formatting before concatenation into syscall
 
 if (isset($Installer) && $installer == "Y") {
   system("chmod +x installer.sh");
-  system("./installer.sh");
+  system("./installer.sh ".$distroval.);
 }
 
 else if (isset($Installer) && $installer == "N") {
