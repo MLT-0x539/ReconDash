@@ -1,3 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/assets/installer.css">
+  <title>Bash Script Installer</title>
+ </head>
+ <body>
+  <center>
+   <h2>Required Bash Script Installer:</h2>
+   <p>This script will download and install the required bash scripts onto your VPS. Many web-based aspects of this recon tool can still be used without the bash scripts, but for the tool
+   to reach its full potential, you should also install these bash scripts for more extensive recon capabilities. In order to install these, select 'Y' as the option on the drop-down menu
+   asking you if you want to install these, and select the Linux distribution that is running on your VPS. If you cannot see your Linux Distribution listed as an option within the drop-down
+   menu, then just choose an option that uses the same package manager as your distro. If you aren't sure which option that would be, then take a look at the following list:</p>
+   <br />
+   <a href="https://en.wikipedia.org/wiki/List_of_Linux_distributions">List of distros and their corresponding package managers</a>
+  </center>
+   <br /><br />
+    <form action="sh_installer.php" method="POST">
+      Do you want to install the Bash Scripts onto your machine?:<input name="installer" type="installer"><br />
+      <select>
+        <option value="Y">Yes</option>
+        <option value="N">No</option>
+      <input type="submit" value="submit">
+     </select>
+     </form>
+   <br /><br />
+    <form action="sh_installer.php" method="POST">
+      Select your distro from the drop-down menu:<input name="distro" type="distro"><br />
+      <select>
+        <option value="debian">Debkan</option>
+        <option value="ubuntu">Ubuntu</option>
+        <option value="arch">Arch</option>
+        <option value="kali">Kali</option>
+        <option value="RHEL">RHEL</option>
+        <option value="Fedora">Fedora</option>
+        <option value="Gentoo">Gentoo</option>
+        <option value="Slackware">Slackware</option>
+        <option value="Mint">Mint</option>
+      <input type="submit" value="submit">
+     </select>
+     </form>
+ </body> 
+</html>
+
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -58,3 +103,4 @@ else if (isset($Installer) && $installer == "N") {
 else if (!isset($Installer)) {
   echo "<br /><p><b>ERROR: </b>No value set for installation script!</p><br />";  
 } 
+?>
