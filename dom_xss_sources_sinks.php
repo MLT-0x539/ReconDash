@@ -127,7 +127,7 @@ function formatOutput($url, $results) {
 </head>
 <body>
     <div class='container'>
-        <h1>DOM-Based XSS Vulnerability Scanner</h1>
+        <h1>DOM-Based XSS Source/Sink Identifier</h1>
         <div class='url'><strong>Analyzed File:</strong> " . htmlspecialchars($url) . "</div>
         
         <div class='summary'>
@@ -136,7 +136,6 @@ function formatOutput($url, $results) {
             <span>" . count($results['sinks']) . "</span> potential sinks
         </div>";
     
-    // Display Sources
     $output .= "<h2>DOM XSS Sources (User Input)</h2>";
     if (count($results['sources']) > 0) {
         $output .= "<table class='sources'>
@@ -159,7 +158,6 @@ function formatOutput($url, $results) {
         $output .= "<div class='no-results'>No DOM XSS sources detected</div>";
     }
     
-    // Display Sinks
     $output .= "<h2>DOM XSS Sinks (Dangerous Operations)</h2>";
     if (count($results['sinks']) > 0) {
         $output .= "<table class='sinks'>
@@ -192,26 +190,20 @@ function formatOutput($url, $results) {
     
     return $output;
 }
-
-// Main execution
 try {
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['url'])) {
         $url = $_POST['url'];
-        
-        // Validate URL
+
         if (!filter_var($url, FILTER_VALIDATE_URL)) {
             throw new Exception("Invalid URL provided");
         }
-        
-        // Fetch and scan JavaScript
+    
         $content = fetchJavaScript($url, $timeout);
         $results = scanJavaScript($content, $sources, $sinks);
         
-        // Output results
         echo formatOutput($url, $results);
         
     } else {
-        // Display input form
         ?>
         <!DOCTYPE html>
         <html>
