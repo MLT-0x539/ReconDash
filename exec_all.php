@@ -5,7 +5,9 @@ include("detect_all_userinput.php");
 include("js_endpoint_fuzzer.php");
 include("js_secrets_fuzzer.php");
 include("param_crawl_fuzz.php");
-include("run_internal_recon_tools.php")
+include("run_internal_recon_tools.php");
+include("dom_xss_sources_sinks.php");
+include("js_deob_unminify_beautify.php");
 
 $runner = $_POST['selected-options'];
 $runall = $_POST['all-selected'];
