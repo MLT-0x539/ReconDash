@@ -201,7 +201,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['url'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Endpoint Crawler</title>
-    <link rel="text/css" href="/assets/endpoint_fuzz.css">
+    <link rel="stylesheet" href="/assets/endpoint_fuzz.css">
 </head>
 <body>
     <div class="container">
