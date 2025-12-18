@@ -33,7 +33,7 @@
         <option value="ubuntu">Ubuntu</option>
         <option value="arch">Arch</option>
         <option value="kali">Kali</option>
-        <option value="RHEL">RHEL</option>
+        <option value="redhat">RHEL</option>
         <option value="Fedora">Fedora</option>
         <option value="Gentoo">Gentoo</option>
         <option value="Slackware">Slackware</option>
@@ -69,7 +69,7 @@ if ($isset($distro)) {
          echo "<br /><p>Kali selected as distro. Passing this value as argument to installation script</p>";
          $distroval = "kali";
          break;
-     case rhel:
+     case redhat:
          echo "<br /><p>Redhat selected as distro. Passing this value as argument to installation script</p>";
          $distroval = "RHEL";
          break;
