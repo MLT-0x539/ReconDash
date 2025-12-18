@@ -69,7 +69,7 @@ if ($isset($distro)) {
          echo "<br /><p>Kali selected as distro. Passing this value as argument to installation script</p>";
          $distroval = "kali";
          break;
-     case RHEL:
+     case rhel:
          echo "<br /><p>Redhat selected as distro. Passing this value as argument to installation script</p>";
          $distroval = "RHEL";
          break;
