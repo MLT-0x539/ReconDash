@@ -1,5 +1,5 @@
 # ReconDash
-Web-based dashboard to automate reconnaisance process
+Web-based dashboard to automate reconnaisance process + tools to allow for team collaboration in real-time whilst using this dashboard
 
 ## prerequisites:
 - Webserver w/ PHP installed
