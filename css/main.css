@@ -99,3 +99,32 @@
             margin-top: 10px;
             color: #00f260;
         }
+
+
+	.dashboard-links {
+	     border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            padding: 1px;
+            backdrop-filter: blur(1px);
+	     display: inline-block;
+            background: linear-gradient(45deg, #00f260, #0575e6);
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+	      color: red; !important;
+			
+		}
+
+		
+        .dashboard-links:hover {
+            transform: scale(1.05); translateY(-2px);
+	     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+            background: rgba(255, 255, 255, 0.08);
+            background-color: #f44336;color: white;
+	     border: 2px dashed #04AA6D;
+        }
+		
+       hr {
+             border: 8px solid green;
+             border-radius: 5px;
+		}
