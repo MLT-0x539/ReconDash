@@ -32,6 +32,15 @@
             margin-bottom: 10px;
         }
 
+        h2 {
+            font-size: 1.5em;
+            background: linear-gradient(45deg, #00f260, #0575e6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
         .subtitle {
             color: #a0a0a0;
             font-size: 1.1em;
