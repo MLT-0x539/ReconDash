@@ -39,6 +39,18 @@ if (isset($runner)) {
        echo "<br /><p>No value set!<p>";
    }
 
-?>
+   else {
+       echo "<br /><p>UNKNOWN ERROR!</p>";
+   }
+}
+
+else if (!isset($runner)) {
+   echo "<br /><p>NO VALUE SET!</p>";
+}
+
+else {
+   echo "<br /><p>UNKNOWN ERROR!</p>
+}
 
 ?>
+
