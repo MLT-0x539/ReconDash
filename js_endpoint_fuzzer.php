@@ -1,8 +1,7 @@
 <?php
-// Enable error reporting for debugging
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-set_time_limit(300); // 5 minutes timeout
+set_time_limit(300);
 
 class JSEndpointCrawler {
     private $baseUrl;
