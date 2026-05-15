@@ -8,6 +8,7 @@ require_once("param_crawl_fuzz.php");
 require_once("run_internal_recon_tools.php");
 require_once("dom_xss_sources_sinks.php");
 require_once("js_deob_unminify_beautify.php");
+require_once("ServerSide_CONFIGZ.php");
 
 $runner = $_POST['selected-options'];
 $runall = $_POST['all-selected'];
