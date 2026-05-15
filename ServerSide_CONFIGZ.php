@@ -42,7 +42,7 @@ public function runAll() {
     system("./launcher.sh");
     system("./recondash.sh >> out.txt");
     system("./daemon");
-    system("cat out.txt ; cat out2.txt ; diff COMPARE_HERE);
+    system("cat out.txt ; cat out2.txt ; diff compare);
     }
 
 ?>
